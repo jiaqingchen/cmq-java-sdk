@@ -53,24 +53,24 @@ public class Producer {
             System.out.println("--------------- queue[qiyuan-test] ---------------");
             Queue queue = account.getQueue(queueName);
 
-            // 设置队列属性
-            System.out.println("---------------set queue attributes ...---------------");
-            QueueMeta meta1 = new QueueMeta();
-            meta1.pollingWaitSeconds = 20;
-            queue.setQueueAttributes(meta1);
-            System.out.println("pollingWaitSeconds=20 set");
-
-            // 获取队列属性
-            System.out.println("---------------get queue attributes ...---------------");
-            QueueMeta meta2 = queue.getQueueAttributes();
-            System.out.println("maxMsgHeapNum:" + meta2.maxMsgHeapNum);
-            System.out.println("pollingWaitSeconds:" + meta2.pollingWaitSeconds);
-            System.out.println("visibilityTimeout:" + meta2.visibilityTimeout);
-            System.out.println("maxMsgSize:" + meta2.maxMsgSize);
-            System.out.println("createTime:" + meta2.createTime);
-            System.out.println("lastModifyTime:" + meta2.lastModifyTime);
-            System.out.println("activeMsgNum:" + meta2.activeMsgNum);
-            System.out.println("inactiveMsgNum:" + meta2.inactiveMsgNum);
+//            // 设置队列属性
+//            System.out.println("---------------set queue attributes ...---------------");
+//            QueueMeta meta1 = new QueueMeta();
+//            meta1.pollingWaitSeconds = 20;
+//            queue.setQueueAttributes(meta1);
+//            System.out.println("pollingWaitSeconds=20 set");
+//
+//            // 获取队列属性
+//            System.out.println("---------------get queue attributes ...---------------");
+//            QueueMeta meta2 = queue.getQueueAttributes();
+//            System.out.println("maxMsgHeapNum:" + meta2.maxMsgHeapNum);
+//            System.out.println("pollingWaitSeconds:" + meta2.pollingWaitSeconds);
+//            System.out.println("visibilityTimeout:" + meta2.visibilityTimeout);
+//            System.out.println("maxMsgSize:" + meta2.maxMsgSize);
+//            System.out.println("createTime:" + meta2.createTime);
+//            System.out.println("lastModifyTime:" + meta2.lastModifyTime);
+//            System.out.println("activeMsgNum:" + meta2.activeMsgNum);
+//            System.out.println("inactiveMsgNum:" + meta2.inactiveMsgNum);
 
             // 发送单条信息
             System.out.println("---------------send message ...---------------");

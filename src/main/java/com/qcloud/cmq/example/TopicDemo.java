@@ -30,16 +30,16 @@ public class TopicDemo {
             Topic topic = account.getTopic(topicName);
             Thread.sleep(1000);
 
-            // 设置和获取 topic 元数据
-            System.out.println("---------------- set and get topic meta ----------------");
-            TopicMeta topicMeta = new TopicMeta();
-            topicMeta.maxMsgSize = 32768;
-            topic.setTopicAttributes(topicMeta.maxMsgSize);
-            topicMeta = topic.getTopicAttributes();
-            System.out.println("maxMsgSize: "+ topicMeta.maxMsgSize);
-            System.out.println("createTime: "+ topicMeta.createTime);
-            System.out.println("lastModifyTime: "+ topicMeta.lastModifyTime);
-            System.out.println("msgCount: "+ topicMeta.msgCount);
+//            // 设置和获取 topic 元数据
+//            System.out.println("---------------- set and get topic meta ----------------");
+//            TopicMeta topicMeta = new TopicMeta();
+//            topicMeta.maxMsgSize = 32768;
+//            topic.setTopicAttributes(topicMeta.maxMsgSize);
+//            topicMeta = topic.getTopicAttributes();
+//            System.out.println("maxMsgSize: "+ topicMeta.maxMsgSize);
+//            System.out.println("createTime: "+ topicMeta.createTime);
+//            System.out.println("lastModifyTime: "+ topicMeta.lastModifyTime);
+//            System.out.println("msgCount: "+ topicMeta.msgCount);
 
             // 创建 sub
 //            System.out.println("---------------- create sub ----------------");
@@ -54,23 +54,23 @@ public class TopicDemo {
             String subscriptionName = "qiyuan-test-sub";
             Subscription sub = account.getSubscription(topicName,subscriptionName);
 
-            // 获取 Subscription 元数据
-            SubscriptionMeta subscriptionMeta = sub.getSubscriptionAttributes();
-            System.out.println("Endpoint: " + subscriptionMeta.Endpoint);
-            System.out.println("Protocal " + subscriptionMeta.Protocal);
-            System.out.println("TopicOwner: " + subscriptionMeta.TopicOwner);
-            System.out.println("CreateTime: " + subscriptionMeta.CreateTime);
-            System.out.println("msgCount: " + subscriptionMeta.msgCount);
-
-            // 列出当前 topic 下所有 sub
-            System.out.println("---------------- list sub ----------------");
-            ArrayList< String> vSubscription = new ArrayList<String>();
-
-            int SubscriptionCount = topic.ListSubscription(-1,-1,"",vSubscription);
-            for (String subscription : vSubscription)
-            {
-                System.out.println("Subscription name :" + subscription);
-            }
+//            // 获取 Subscription 元数据
+//            SubscriptionMeta subscriptionMeta = sub.getSubscriptionAttributes();
+//            System.out.println("Endpoint: " + subscriptionMeta.Endpoint);
+//            System.out.println("Protocal " + subscriptionMeta.Protocal);
+//            System.out.println("TopicOwner: " + subscriptionMeta.TopicOwner);
+//            System.out.println("CreateTime: " + subscriptionMeta.CreateTime);
+//            System.out.println("msgCount: " + subscriptionMeta.msgCount);
+//
+//            // 列出当前 topic 下所有 sub
+//            System.out.println("---------------- list sub ----------------");
+//            ArrayList< String> vSubscription = new ArrayList<String>();
+//
+//            int SubscriptionCount = topic.ListSubscription(-1,-1,"",vSubscription);
+//            for (String subscription : vSubscription)
+//            {
+//                System.out.println("Subscription name :" + subscription);
+//            }
 
             //发布信息
             System.out.println("---------------- publish message ----------------");
